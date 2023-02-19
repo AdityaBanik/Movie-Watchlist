@@ -1,0 +1,226 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    color:  #A5A5A5;
+    background: #121212;
+}
+
+
+
+*{
+    box-sizing: border-box;
+}
+
+/* TYPOGRAPHY */
+nav{
+    font-weight: 700;
+}
+
+nav li:first-of-type{
+    pointer-events: none;
+    font-size: 2.7rem;
+    font-weight: 800;
+}
+
+h3{
+    margin: 0;
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+p{
+    font-size: 0.875rem;
+    margin: 0;
+}
+
+.small-text{
+    font-size: .75rem;
+    color: #fff;
+}
+
+a{
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover{
+    color: red;
+}
+
+
+/* Layout */
+.container{
+    max-width: 720px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* HEADER */
+header{
+    background: url('images/background.png'),black;
+    background-blend-mode: luminosity;
+    padding: 6em 0 2.5em 0;
+    position: relative;
+}
+
+nav ul{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav li {
+    list-style: none;
+    color: #fff;
+}
+
+/* Search bar */
+.search-box{
+    margin-bottom: -2.5em;
+    margin-top: 4em;
+    height: 3.125em;
+    display: flex;
+    transform: translateY(calc(3.125em/2)); 
+    background: #2E2E2F;
+    border-radius: 6px;
+}
+
+.search-box label{
+    align-self: center;
+    padding: 1em;
+}
+
+input[type="text"]{
+    border: none;
+    background: #2E2E2F;
+    color: inherit;
+    font-weight: 500;
+    width: 100%;
+  
+    
+}
+.search-box input[type="text"]:focus{
+    outline: none;
+}
+
+
+
+
+/* main */
+
+main{
+    display: flex;
+    flex-direction: column;
+    padding-top: 2.75em;
+    
+}
+
+main>h3{
+    font-weight: 700;
+}
+
+/* Movie card */
+.movie-card{
+    display: flex;
+    padding: 1.75em 0;
+    border-bottom: 1.5px solid #2C2C2C;
+}
+
+.movie-card img{
+    width: 6.25em;
+    height: 9.8em;
+    margin-right: 1.5em;
+}
+
+.movie-card-content div{
+   display: flex;
+   align-items: center;
+}
+
+.movie-card-content>*{
+    
+    margin: 1em 0;
+}
+
+.movie-card-content div>*{
+    
+    margin-right: 1.2em;
+}
+
+
+
+/* Buttons */
+button{
+    font-size: calc(1rem - 2px);
+    cursor: pointer;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+}
+
+.search-btn{
+    
+    border: none;
+    background: #4B4B4B;
+    color: #fff;
+    padding: 1.3em 4em;
+    font-weight: 500;
+
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.search-btn:hover,.search-btn:active{
+
+    background-color: #A5A5A5;
+}
+
+.add-btn{
+    white-space: nowrap;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: none;
+    
+}
+.add-btn i{
+    margin-right: .5em;
+}
+
+.add-btn:hover{
+    cursor: pointer;
+}
+
+
+.remove-btn{
+    color: #e63946 ;
+}
+
+/* Additional styles */
+
+.message-container{
+    margin-top: 9.25em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    font-weight: 700;
+    height: 100%;
+}
+
+.message-container h3{
+    margin: .5em;
+}
+
+
+@media  (max-width: 490px) {
+    
+    html{
+        font-size: 13px;
+    }
+  
+}
