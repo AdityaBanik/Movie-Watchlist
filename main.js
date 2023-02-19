@@ -35,17 +35,13 @@ async function getMovies(e){
 
 
 async function searchMovies(string){
-    const  response = await fetch(`http://www.omdbapi.com/?apikey=ce85253d&s=${string}`,{
-        referrerPolicy: "unsafe_url" 
-    })
+    const  response = await fetch(`http://www.omdbapi.com/?apikey=ce85253d&s=${string}`)
     const data = await response.json()
     return data
 }
 
 async function getMovieDetails(imdbID){
-    const  response = await fetch(`http://www.omdbapi.com/?apikey=ce85253d&i=${imdbID}`,{
-        referrerPolicy: "unsafe_url" 
-    })
+    const  response = await fetch(`http://www.omdbapi.com/?apikey=ce85253d&i=${imdbID}`)
     const data = await response.json()
     return data
 }
