@@ -3,11 +3,11 @@ import Movie from "./movie.js"
 
 const form = document.getElementById('search')
 const main = document.querySelector('main')
+const input = document.getElementById('search-field')
 
 
-
-document.addEventListener('submit', getMovies)
-
+form.addEventListener('submit', getMovies)
+//input.addEventListener('input',getMovies)
 
 async function getMovies(e){
     e.preventDefault()
@@ -16,6 +16,8 @@ async function getMovies(e){
 
     const searchResults = await searchMovies(searchStr)
     
+    renderWaitMessage()
+
     if (searchResults.Response == 'True'){
 
         //Getting imdbID's of search results
@@ -65,6 +67,16 @@ function renderError(){
     main.innerHTML =  `
     <div class="message-container">
         <h3>Unable to find what you’re looking for. Please try another search.</h3>
+    </div>`
+
+}
+
+
+function renderWaitMessage(){
+    main.innerHTML =  `
+    <div class="message-container">
+        <i class="fa-solid fa-magnifying-glass fa-4x"></i>
+        <h3>Searching</h3>
     </div>`
 
 }

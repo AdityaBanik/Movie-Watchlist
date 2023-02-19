@@ -69,6 +69,9 @@ class Movie{
 
                 const plot = document.createElement('p')
                 plot.textContent = Plot 
+                plot.classList.add('line-clamp')
+
+
 
                 movieCardContent.appendChild(titleContainer)
                 movieCardContent.appendChild(infoContainer)

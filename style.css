@@ -148,7 +148,6 @@ main>h3{
 }
 
 .movie-card-content div>*{
-    
     margin-right: 1.2em;
 }
 
@@ -217,10 +216,26 @@ button{
 }
 
 
+.line-clamp{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+            line-clamp: 3; 
+    -webkit-box-orient: vertical;
+}
+
+
 @media  (max-width: 490px) {
     
     html{
         font-size: 13px;
+    }
+
+    nav li:first-of-type{
+        pointer-events: none;
+        font-size: 2rem;
+        font-weight: 800;
     }
   
 }
